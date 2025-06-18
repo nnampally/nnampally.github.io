@@ -1,206 +1,348 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nagaraju Nampally | Lead Database/Site Reliability Engineer</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Portfolio of Nagaraju Nampally, Lead Database and Site Reliability Engineer specializing in PostgreSQL, cloud migrations, and database optimization.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #283593;
+            --secondary: #1a237e;
+            --background: #f4f4f9;
+            --card: #fff;
+            --text: #222;
+            --accent: #1976d2;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background: #f4f4f9;
-            color: #333;
+            background: var(--background);
+            color: var(--text);
             scroll-behavior: smooth;
         }
         header {
-            background: #283593;
+            background: var(--primary);
             color: #fff;
-            padding: 20px 0;
             text-align: center;
+            padding: 2rem 1rem 1rem;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        header h2 {
-            margin: 5px 0 0;
-            font-size: 1.2rem;
-            font-weight: normal;
-        }
+        header h1 { margin: 0; font-size: 2.2rem; }
+        header h2 { margin: 0.5rem 0 0 0; font-size: 1.2rem; font-weight: normal;}
         .contact-info {
             margin-top: 10px;
+            font-size: 1rem;
         }
-        .contact-info a {
+        .contact-info a, .contact-info span {
             color: #fff;
+            margin: 0 0.25em;
             text-decoration: underline;
         }
         nav {
-            background: #1a237e;
-            padding: 10px 0;
+            background: var(--secondary);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .nav-container {
             display: flex;
-            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
-        nav ul li {
-            margin: 0 15px;
+        .logo {
+            font-weight: bold;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            color: #fff;
         }
-        nav ul li a {
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li a {
             color: #fff;
             text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+        .nav-links li a:hover {
+            color: var(--accent);
+        }
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
         section {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background: var(--card);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         section h2 {
-            color: #283593;
+            color: var(--primary);
             margin-top: 0;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.5rem;
         }
-        footer {
-            background: #1a237e;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+        .card {
+            padding: 1.25rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            background: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            max-height: 140px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 0.5rem 0 0.4rem;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75em;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skills-list li {
+            background: #e8eaf6;
+            color: var(--primary);
+            padding: 0.4em 1em;
+            border-radius: 1em;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            gap: 0.4em;
         }
         .quote {
             font-style: italic;
             text-align: center;
-            margin: 20px 0;
+            margin: 2rem 0 0.5rem 0;
             color: #555;
+            font-size: 1.1em;
         }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-            nav ul {
+        .contact-social {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        .contact-social a {
+            font-size: 1.3rem;
+            color: var(--primary);
+            transition: color 0.2s;
+        }
+        .contact-social a:hover {
+            color: var(--accent);
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 0.8em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            resize: vertical;
+        }
+        .contact-form button {
+            background: var(--accent);
+            color: #fff;
+            padding: 0.8em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: var(--primary);
+        }
+        footer {
+            background: var(--secondary);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        /* Responsive styles */
+        @media (max-width: 900px) {
+            main, .nav-container { max-width: 100%; }
+        }
+        @media (max-width: 700px) {
+            header h1 { font-size: 1.4rem; }
+            .nav-links { gap: 1rem; }
+            section { padding: 1.1rem; }
+        }
+        @media (max-width: 600px) {
+            .nav-container { flex-direction: row; }
+            .nav-links {
+                display: none;
                 flex-direction: column;
+                position: absolute;
+                top: 62px;
+                left: 0;
+                width: 100vw;
+                background: var(--secondary);
+                padding: 0.9em 0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.09);
             }
-            nav ul li {
-                margin: 10px 0;
-            }
+            .nav-links.show { display: flex; }
+            .hamburger { display: block; }
+            section { padding: 0.8rem; }
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>Nagaraju Nampally</h1>
-    <h2>Lead Database / Site Reliability Engineer</h2>
-    <div class="contact-info">
-        <span>📞 909-353-3280</span> | 
-        <a href="mailto:nampraj13@gmail.com">nampraj13@gmail.com</a> | 
-        <a href="https://linkedin.com/in/nnampally" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com/nnampally" target="_blank">GitHub</a>
-    </div>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        Results-driven Database Engineer and Site Reliability Engineer with 8+ years of experience specializing in PostgreSQL, cloud and on-premises database administration, performance tuning, and high availability solutions. Expert in automating database systems, improving operational efficiency with AWS, Azure, and GCP, and implementing SRE and DevOps best practices. Proven track record in disaster recovery, cloud migrations, and optimizing system reliability and uptime.
-    </p>
-</section>
-
-<section id="experience">
-    <h2>Experience</h2>
-    <div>
-        <h3>Lead Database Consultant</h3>
-        <p>ADP Inc. – Pasadena, CA | May 2025 – Present</p>
-        <ul>
-            <li>Lead initiatives to improve database performance, streamline operations, and drive automation across the database lifecycle.</li>
-            <li>Monitor database health and performance using CloudWatch, Dynatrace, and Grafana.</li>
-            <li>Optimize PostgreSQL queries, parameter tuning, and index management.</li>
-        </ul>
-    </div>
-    <hr>
-    <div>
-        <h3>Sr Database Administrator / Reliability Engineer</h3>
-        <p>Workday Inc. – Pleasanton, CA | July 2021 – April 2025</p>
-        <ul>
-            <li>Designed and managed highly available PostgreSQL clusters across AWS, GCP, Azure.</li>
-            <li>Automated health checks, scaling, and backups with Terraform, Chef, and Python.</li>
-            <li>Led cloud DB migrations, optimizing performance, cost, and resilience.</li>
-        </ul>
-    </div>
-</section>
-
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>PostgreSQL Development/Administration/Optimization</li>
-        <li>Database Reliability & Performance Tuning</li>
-        <li>Cloud Migrations</li>
-        <li>Kubernetes & Containerization (Microservices)</li>
-        <li>Multi-Cloud Architecture & DevOps</li>
-        <li>Infrastructure as Code (IaC)</li>
-        <li>Observability and Monitoring</li>
-        <li>Security, Identity, and Compliance</li>
-    </ul>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-    <ul>
-        <li><b>Cloud Migration:</b> Migrated databases to AWS RDS and Azure SQL, improving performance and cost efficiency.</li>
-        <li><b>Database Automation:</b> Automated maintenance workflows using Python, Terraform, and Chef.</li>
-        <li><b>Monitoring Dashboards:</b> Developed Grafana dashboards for real-time database monitoring.</li>
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:nampraj13@gmail.com">nampraj13@gmail.com</a></p>
-    <p>Phone: 909-353-3280</p>
-    <ul>
-        <li><a href="https://linkedin.com/in/nnampally" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/nnampally" target="_blank">GitHub</a></li>
-    </ul>
-</section>
-
-<footer>
-</footer>
-
-<script>
-    // Dynamic Quotes
-    const quotes = [
-        "Strive for reliability, automate for efficiency.",
-        "Database performance is the backbone of scalability.",
-        "Cloud migrations are the future of resilient systems.",
-        "Observability is key to proactive problem-solving."
-    ];
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    const quoteElement = document.createElement("div");
-    quoteElement.className = "quote";
-    quoteElement.textContent = randomQuote;
-    document.body.insertBefore(quoteElement, document.querySelector("#about"));
-</script>
+    <header>
+        <h1>Nagaraju Nampally</h1>
+        <h2>Lead Database / Site Reliability Engineer</h2>
+        <div class="contact-info">
+            <span><i class="fas fa-phone"></i> 909-353-3280</span>|
+            <a href="mailto:nampraj13@gmail.com"><i class="fas fa-envelope"></i> nampraj13@gmail.com</a>|
+            <a href="https://linkedin.com/in/nnampally" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>|
+            <a href="https://github.com/nnampally" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">NN</div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Results-driven Database Engineer and Site Reliability Engineer with 8+ years of experience specializing in PostgreSQL, cloud and on-premises database administration, performance tuning, automation, and multi-cloud architectures. Passionate about reliability, observability, and building scalable, efficient systems.
+            </p>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div>
+                <h3>Lead Database Consultant</h3>
+                <p>ADP Inc. – Pasadena, CA | May 2025 – Present</p>
+                <ul>
+                    <li>Lead initiatives to improve database performance, streamline operations, and drive automation across the database lifecycle.</li>
+                    <li>Monitor database health and performance using CloudWatch, Dynatrace, and Grafana.</li>
+                    <li>Optimize PostgreSQL queries, parameter tuning, and index management.</li>
+                </ul>
+            </div>
+            <hr>
+            <div>
+                <h3>Sr Database Administrator / Reliability Engineer</h3>
+                <p>Workday Inc. – Pleasanton, CA | July 2021 – April 2025</p>
+                <ul>
+                    <li>Designed and managed highly available PostgreSQL clusters across AWS, GCP, Azure.</li>
+                    <li>Automated health checks, scaling, and backups with Terraform, Chef, and Python.</li>
+                    <li>Led cloud DB migrations, optimizing performance, cost, and resilience.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li><i class="fas fa-database"></i> PostgreSQL</li>
+                <li><i class="fas fa-chart-line"></i> Performance Tuning</li>
+                <li><i class="fab fa-aws"></i> Cloud Migrations (AWS, GCP, Azure)</li>
+                <li><i class="fas fa-server"></i> Kubernetes & Containerization</li>
+                <li><i class="fas fa-code"></i> Infrastructure as Code (Terraform, Chef)</li>
+                <li><i class="fas fa-eye"></i> Observability & Monitoring</li>
+                <li><i class="fas fa-user-shield"></i> Security & Compliance</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://dummyimage.com/600x140/1976d2/fff&text=Cloud+Migration" alt="Cloud Migration Project">
+                    <h3>Cloud Migration</h3>
+                    <p>Migrated databases to AWS RDS and Azure SQL, improving performance and cost efficiency.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
+                </div>
+                <div class="card">
+                    <img src="https://dummyimage.com/600x140/283593/fff&text=Automation" alt="Database Automation Project">
+                    <h3>Database Automation</h3>
+                    <p>Automated maintenance workflows using Python, Terraform, and Chef.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
+                </div>
+                <div class="card">
+                    <img src="https://dummyimage.com/600x140/1a237e/fff&text=Monitoring" alt="Dashboard Project">
+                    <h3>Monitoring Dashboards</h3>
+                    <p>Developed Grafana dashboards for real-time database monitoring.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
+                </div>
+            </div>
+        </section>
+        <!-- Google Form Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div style="width:100%;max-width:640px;margin:0 auto;">
+                <!-- Replace the src URL below with your Google Form's embed link -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScSFqWv00VkHo-hz8VTmmsq3h13Bjg63ASUKU-Aw5uSSjqjqQ/viewform?embedded=true"
+                        width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">
+                    Loading…
+                </iframe>
+            </div>
+        </section>
+        <div class="quote" id="dynamic-quote"></div>
+    </main>
+    <footer>
+        &copy; 2025 Nagaraju Nampally. All rights reserved.
+    </footer>
+    <script>
+        // Hamburger menu
+        document.getElementById('hamburger').onclick = function() {
+            document.getElementById('nav-links').classList.toggle('show');
+        };
+        // Dynamic Quotes
+        const quotes = [
+            "Strive for reliability, automate for efficiency.",
+            "Database performance is the backbone of scalability.",
+            "Cloud migrations are the future of resilient systems.",
+            "Observability is key to proactive problem-solving."
+        ];
+        document.getElementById('dynamic-quote').textContent =
+            quotes[Math.floor(Math.random() * quotes.length)];
+    </script>
 </body>
 </html>
