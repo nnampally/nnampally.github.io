@@ -3,180 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nagaraju Nampally | Lead Database/Site Reliability Engineer</title>
+    <title>Nagaraju Nampally - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #fafbfc; color: #232323; }
-        header { background: #283593; color: #fff; padding: 32px 0 16px 0; text-align: center; }
-        header h1 { margin-bottom: 8px; font-size: 2.2em; }
-        header h2 { margin-top: 0; font-weight: normal; font-size: 1.2em; }
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center;}
-        nav li { margin: 0 10px; }
-        nav a { color: #fff; text-decoration: underline; }
-        section { max-width: 900px; margin: 32px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px #ececec; }
-        section h2 { color: #283593; margin-top: 0; }
-        ul { padding-left: 18px; }
-        .contact-info { text-align: center; margin-bottom: 18px; }
-        .contact-info a { color: #283593; text-decoration: underline; }
-        .grid { display: flex; flex-wrap: wrap; gap: 32px; }
-        .grid-col { flex: 1 1 300px; min-width: 280px; }
-        .exp-title { font-weight: bold; color: #283593; }
-        .exp-company { font-style: italic; }
-        footer { text-align: center; color: #999; padding: 18px 0; margin-top: 48px; }
-        @media (max-width: 700px) {
-            section { padding: 18px; }
-            .grid { flex-direction: column; }
+        /* Responsive styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section h2 {
+            margin-top: 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .contact ul {
+            list-style: none;
+            padding: 0;
+        }
+        .contact ul li {
+            margin: 0.5rem 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>NAGARAJU NAMPALLY</h1>
-    <h2>Lead Database / Site Reliability Engineer</h2>
-    <div class="contact-info">
-        <span>📞 909-353-3280</span> | 
-        <a href="mailto:nampraj13@gmail.com">nampraj13@gmail.com</a> | 
-        <a href="https://linkedin.com/in/nnampally" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com/nnampally" target="_blank">GitHub</a>
-    </div>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#expertise">Areas of Expertise</a></li>
-        <li><a href="#technical">Technical Skills</a></li>
-        <li><a href="#experience">Professional Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-    </ul>
-</nav>
-
-<section id="summary">
-    <h2>Professional Summary</h2>
-    <p>
-        Results-driven Database Engineer and Site Reliability Engineer with 8+ years of experience specializing in PostgreSQL, cloud and on-premises database administration, performance tuning, and high availability solutions. Expert in automating database systems, improving operational efficiency with AWS, Azure, and GCP, and implementing SRE and DevOps best practices. Proven track record in disaster recovery, cloud migrations, and optimizing system reliability and uptime.
-    </p>
-</section>
-
-<section id="expertise">
-    <h2>Areas of Expertise</h2>
-    <div class="grid">
-        <div class="grid-col">
+    <header>
+        <h1>Nagaraju Nampally</h1>
+        <p>Lead Database/Site Reliability Engineer</p>
+        <nav>
             <ul>
-                <li>PostgreSQL Development/Administration/Optimization</li>
-                <li>Database Reliability & Performance Tuning</li>
-                <li>Cloud Migrations</li>
-                <li>Kubernetes & Containerization (Microservices)</li>
-                <li>Multi-Cloud Architecture & DevOps</li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#expertise">Areas of Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Results-driven Database Engineer/Reliability Engineer, with an emphasis on PostgreSQL. 8+ years of experience in cloud and on-prem database administration, performance tuning, and high availability solutions.</p>
+        <p>Skilled in automating database systems and improving operational efficiency with AWS, Azure, and GCP.</p>
+    </section>
+
+    <section id="expertise">
+        <h2>Areas of Expertise</h2>
+        <div class="grid">
+            <div>
+                <h3>PostgreSQL Development/Administration</h3>
+                <p>Optimization, High Availability, Disaster Recovery</p>
+            </div>
+            <div>
+                <h3>Cloud Migrations</h3>
+                <p>Multi-Cloud Architecture, DevOps, IaC</p>
+            </div>
+            <div>
+                <h3>Observability and Monitoring</h3>
+                <p>Prometheus, Grafana, CloudWatch</p>
+            </div>
+            <div>
+                <h3>Security and Compliance</h3>
+                <p>Identity Management, Disaster Recovery</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <div>
+            <h3>Lead Database Consultant</h3>
+            <p>ADP Inc. Pasadena, CA (May 2025 – Present)</p>
+            <ul>
+                <li>Monitoring database health and performance using tools like CloudWatch, Dynatrace, and Grafana.</li>
+                <li>Automating maintenance workflows such as vacuuming, reindexing, backups, and alerting using Python, Bash, and Terraform.</li>
+                <li>Managing CI/CD pipelines for database deployments using Jenkins and GitHub Actions.</li>
             </ul>
         </div>
-        <div class="grid-col">
+        <div>
+            <h3>Sr Database Administrator/Reliability Engineer</h3>
+            <p>Workday Inc. – Pleasanton, CA (July 2021 – April 2025)</p>
             <ul>
-                <li>High Availability</li>
-                <li>Disaster Recovery & Business Continuity</li>
-                <li>Infrastructure as Code (IaC)</li>
-                <li>Observability and Monitoring</li>
-                <li>Security, Identity, and Compliance</li>
+                <li>Designed and managed highly available, fault-tolerant PostgreSQL clusters across AWS, GCP, and Azure.</li>
+                <li>Automated database health checks, scaling, and backup processes using Terraform, Chef, and Python.</li>
+                <li>Led cloud database migrations, optimizing performance, cost, and resilience.</li>
             </ul>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="technical">
-    <h2>Technical Expertise</h2>
-    <ul>
-        <li><b>Databases:</b> PostgreSQL, MySQL, Oracle11g, Redshift, BigQuery, MongoDB, Cassandra, Redis, SQL Server, Timescale</li>
-        <li><b>CNCF Landscape:</b> Ansible, Chef, Terraform, Kubernetes</li>
-        <li><b>Cloud:</b> AWS (VPC, EC2, EBS, RDS, DMS, Route53, S3, IAM, Lambda, DynamoDB, ECS), Azure SQL, Google Cloud SQL, EKS</li>
-        <li><b>Tools:</b> Jenkins, Git, GitHub, Docker, Elasticsearch, Prometheus, Grafana, JFrog</li>
-        <li><b>Languages/Scripts:</b> Python, Shell, SQL, PL/pgSQL, Go</li>
-        <li><b>CI/CD & Version Control:</b> Git, GitHub, Jenkins, Docker</li>
-    </ul>
-</section>
-
-<section id="experience">
-    <h2>Professional Experience</h2>
-    <div>
-        <div class="exp-title">Lead Database Consultant</div>
-        <div class="exp-company">ADP Inc. – Pasadena, CA | May 2025 – Present</div>
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:nampraj13@gmail.com">nampraj13@gmail.com</a></p>
+        <p>Phone: 909-353-3280</p>
         <ul>
-            <li>Lead initiatives to improve database performance, streamline operations, and drive automation across the database lifecycle.</li>
-            <li>Monitor database health and performance using CloudWatch, Dynatrace, and Grafana.</li>
-            <li>Optimize PostgreSQL queries, parameter tuning, and index management.</li>
-            <li>Automate maintenance workflows (vacuum, reindexing, backups, alerts) using Python, Bash, and Terraform.</li>
-            <li>Manage CI/CD pipelines for DB deployments using Jenkins and GitHub Actions.</li>
-            <li>Collaborate on IaC practices with Terraform and Ansible.</li>
-            <li>Lead HA/DR strategy design, failovers, and backup validation.</li>
-            <li>Support database migrations and upgrades with minimal downtime.</li>
-            <li>Participate in capacity planning and cost optimization for cloud-hosted databases.</li>
+            <li><a href="https://linkedin.com/in/nnampally">LinkedIn</a></li>
+            <li><a href="https://github.com/nnampally">GitHub</a></li>
         </ul>
-    </div>
-    <hr>
-    <div>
-        <div class="exp-title">Sr Database Administrator / Reliability Engineer</div>
-        <div class="exp-company">Workday Inc. – Pleasanton, CA | July 2021 – April 2025</div>
-        <ul>
-            <li>Designed and managed highly available PostgreSQL clusters across AWS, GCP, Azure.</li>
-            <li>Automated health checks, scaling, and backups with Terraform, Chef, and Python.</li>
-            <li>Led cloud DB migrations, optimizing performance, cost, and resilience.</li>
-            <li>Implemented multi-region DR and CI/CD pipelines using open-source tools, Docker, and Kubernetes.</li>
-            <li>Developed Lambda functions for RDS lifecycle management and security automation.</li>
-            <li>Enhanced observability with Grafana, Prometheus, CloudWatch.</li>
-            <li>Built APIs and dashboards (Flask) for real-time DB monitoring and metadata access.</li>
-            <li>Provided 24/7 on-call support, resolving incidents and proactively addressing user concerns.</li>
-        </ul>
-    </div>
-    <hr>
-    <div>
-        <div class="exp-title">Sr PostgreSQL DBA / AWS Solution Architect (Lead)</div>
-        <div class="exp-company">Synapsis Inc. (T-Mobile, Deloitte) | Aug 2018 – July 2021</div>
-        <ul>
-            <li>Designed, installed, and managed HA PostgreSQL clusters, optimized for performance and DR.</li>
-            <li>Built high-scale data pipelines for migrations (SQL Server, Oracle → PostgreSQL on AWS RDS).</li>
-            <li>Implemented multi-AZ failover and cross-region replication.</li>
-            <li>Created automated DevOps pipelines using Terraform.</li>
-            <li>Cut AWS costs by $200k/month through architecture and service optimization.</li>
-            <li>Developed monitoring dashboards with ELK Stack & Prometheus.</li>
-        </ul>
-    </div>
-    <hr>
-    <div>
-        <div class="exp-title">PostgreSQL DBA</div>
-        <div class="exp-company">PVR America | Oct 2017 – Aug 2018</div>
-        <p>Managed all aspects of PostgreSQL databases (cloud and on-premises).</p>
-    </div>
-    <hr>
-    <div>
-        <div class="exp-title">PostgreSQL DBA</div>
-        <div class="exp-company">Global Data Mart | May 2016 – Oct 2017</div>
-        <p>Administered and maintained enterprise/opensource database servers (Linux/Windows).</p>
-    </div>
-</section>
+    </section>
 
-<section id="education">
-    <h2>Education</h2>
-    <p>
-        <b>Master’s Degree</b> in Information Technologies and Management<br>
-        Campbellsville University, KY
-    </p>
-</section>
-
-<section id="achievements">
-    <h2>Notable Achievements</h2>
-    <ul>
-        <li>Automated database operations, reducing downtime by 30% using Python, Terraform, and Chef.</li>
-        <li>Led successful migrations to AWS RDS and Azure SQL, improving performance and cost efficiency.</li>
-        <li>Achieved 99.99% uptime for critical cloud databases via HA/DR techniques.</li>
-        <li>Improved PostgreSQL query execution times by 40% through indexing, partitioning, and tuning.</li>
-        <li>Developed PostgreSQL-based event-driven architectures for real-time data processing in microservices.</li>
-    </ul>
-</section>
-
-<footer>
-    &copy; 2025 Nagaraju Nampally. All rights reserved.
-</footer>
-
+    <footer>
+        <p>&copy; 2025 Nagaraju Nampally. All rights reserved.</p>
+    </footer>
 </body>
 </html>
