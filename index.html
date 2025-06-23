@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,476 +8,232 @@
     <meta name="description" content="Portfolio of Nagaraju Nampally, Lead Database and Site Reliability Engineer specializing in PostgreSQL, cloud migrations, and database optimization.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #283593; /* Indigo 800 */
-            --secondary: #1a237e; /* Indigo 900 */
-            --background: #f4f4f9; /* Light Grayish Blue */
+            --primary: #283593;
+            --secondary: #1a237e;
+            --background: #f4f4f9;
             --card: #fff;
-            --text: #333; /* Darker text for readability */
-            --accent: #1976d2; /* Blue 700 */
-            --accent-light: #42a5f5; /* Blue 400 */
-            --shadow-light: rgba(0,0,0,0.08);
-            --shadow-medium: rgba(0,0,0,0.12);
+            --text: #222;
+            --accent: #1976d2;
         }
-
         body {
-            font-family: 'Roboto', Arial, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             background: var(--background);
             color: var(--text);
             scroll-behavior: smooth;
-            line-height: 1.6;
         }
-
-        /* General styles */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary);
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--accent-light);
-            text-decoration: underline;
-        }
-
-        section {
-            background: var(--card);
-            margin-bottom: 2rem;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px var(--shadow-light); /* Softer, larger shadow */
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px var(--shadow-medium);
-        }
-
-        /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary)); /* Gradient background */
+            background: var(--primary);
             color: #fff;
             text-align: center;
-            padding: 3rem 1rem 1.5rem; /* More vertical padding */
-            position: relative; /* For potential future additions like a profile picture */
-            overflow: hidden; /* For animations */
+            padding: 2rem 1rem 1rem;
         }
-
-        header::before { /* Subtle background pattern */
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23FFFFFF" fill-opacity=".05"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm12 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM12 14v-4h-2v4H6v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4H6v2h4v4h2V6h4V4h-4zM36 54v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V24h-2v4h-4v2h4v4h2v-4h4v-2h-4zM12 54v-4h-2v4H6v2h4v4h2v-4h4v-2h-4zM12 34v-4h-2v4H6v2h4v4h2v-4h4v-2h-4zM48 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM24 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM24 54v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm-6-20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM0 34v-4h-2v4H-4v2h4v4h2v-4h4v-2h-4zm0-20v-4h-2v4H-4v2h4v4h2v-4h4v-2h-4zm-6 20v-4h-2v4H-4v2h4v4h2v-4h4v-2h-4z"></path></g></g></svg>');
-            background-size: 60px 60px;
-            opacity: 0.2;
-            z-index: 0;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            position: relative;
-            animation: slideInFromLeft 0.8s ease-out; /* Animation */
-        }
-
-        header h2 {
-            margin: 0.5rem 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 300;
-            opacity: 0.9;
-            position: relative;
-            animation: slideInFromRight 0.8s ease-out; /* Animation */
-        }
-
+        header h1 { margin: 0; font-size: 2.2rem; }
+        header h2 { margin: 0.5rem 0 0 0; font-size: 1.2rem; font-weight: normal;}
         .contact-info {
-            margin-top: 15px;
-            font-size: 1.1rem;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem; /* Spacing between contact items */
+            margin-top: 10px;
+            font-size: 1rem;
         }
-
         .contact-info a, .contact-info span {
             color: #fff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5em;
-            transition: transform 0.2s ease;
-        }
-
-        .contact-info a:hover {
-            transform: translateY(-3px);
+            margin: 0 0.25em;
             text-decoration: underline;
         }
-
-        /* Navigation */
         nav {
             background: var(--secondary);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
         .nav-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem; /* More padding */
-            height: 60px; /* Fixed height for nav */
+            padding: 0 1rem;
         }
-
         .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.8rem;
+            font-weight: bold;
+            font-size: 1.3rem;
             letter-spacing: 2px;
             color: #fff;
-            text-transform: uppercase;
         }
-
         .nav-links {
             display: flex;
-            gap: 2rem; /* More space between links */
+            gap: 1.5rem;
             list-style: none;
             margin: 0;
             padding: 0;
         }
-
         .nav-links li a {
             color: #fff;
             text-decoration: none;
-            font-size: 1.1rem;
-            position: relative; /* For underline effect */
+            font-size: 1rem;
+            transition: color 0.2s;
         }
-
-        .nav-links li a::after { /* Underline animation */
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--accent-light);
-            left: 0;
-            bottom: -5px;
-            transition: width 0.3s ease;
+        .nav-links li a:hover {
+            color: var(--accent);
         }
-
-        .nav-links li a:hover::after {
-            width: 100%;
-        }
-
         .hamburger {
             display: none;
             font-size: 2rem;
             color: #fff;
             cursor: pointer;
-            transition: transform 0.3s ease;
         }
-
-        .hamburger.open {
-            transform: rotate(90deg);
-        }
-
-        /* Main Content */
         main {
             max-width: 1200px;
             margin: 2rem auto;
-            padding: 0 1.5rem;
+            padding: 0 1rem;
         }
-
+        section {
+            background: var(--card);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
         section h2 {
             color: var(--primary);
             margin-top: 0;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            border-bottom: 3px solid var(--accent); /* Accent underline */
-            padding-bottom: 0.5rem;
-            display: inline-block; /* To make border-bottom only as wide as text */
         }
-
-        /* Experience Section */
-        .experience-item {
-            margin-bottom: 1.8rem;
-            padding-bottom: 1.8rem;
-            border-bottom: 1px dashed #e0e0e0; /* Dotted separator */
-            position: relative;
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .experience-item h3 {
-            margin: 0;
-            color: var(--accent);
-            font-size: 1.4rem;
-        }
-
-        .experience-item p {
-            margin: 0.3rem 0 0.8rem;
-            font-size: 0.95rem;
-            color: #666;
-        }
-
-        .experience-item ul {
-            list-style: none;
-            padding: 0;
-            margin: 0.8rem 0 0;
-        }
-
-        .experience-item ul li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-item ul li::before {
-            content: '\2022'; /* Bullet point */
-            color: var(--accent);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1.5em;
-            position: absolute;
-            left: 0;
-        }
-
-        /* Skills Section */
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem; /* More space for skill tags */
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .skills-list li {
-            background: var(--accent);
-            color: #fff;
-            padding: 0.6em 1.2em;
-            border-radius: 20px; /* Pill shape */
-            font-size: 0.95em;
-            display: flex;
-            align-items: center;
-            gap: 0.6em;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        .skills-list li:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .skills-list li i {
-            color: #fff;
-        }
-
-        /* Projects Section */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly larger min-width */
-            gap: 2rem; /* More gap */
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.5rem;
         }
-
         .card {
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px var(--shadow-light);
-            background: var(--card);
+            padding: 1.25rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            background: #f8fafc;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 10px 25px var(--shadow-medium);
-        }
-
         .card img {
             width: 100%;
-            height: 180px; /* Fixed height for consistent look */
-            object-fit: cover; /* Ensures image covers the area */
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border: 1px solid #eee;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            max-height: 140px;
+            object-fit: cover;
         }
-
         .card h3 {
-            margin: 0.5rem 0 0.6rem;
+            margin: 0.5rem 0 0.4rem;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75em;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skills-list li {
+            background: #e8eaf6;
             color: var(--primary);
-            font-size: 1.3rem;
+            padding: 0.4em 1em;
+            border-radius: 1em;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            gap: 0.4em;
         }
-
-        .card p {
-            font-size: 0.95rem;
-            color: #555;
-            flex-grow: 1; /* Make paragraphs take available space */
-        }
-
-        .card a {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.6em 1.2em;
-            background: var(--accent);
-            color: #fff;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        .card a:hover {
-            background: var(--primary);
-            text-decoration: none;
-        }
-
-        /* Contact Section */
         .quote {
             font-style: italic;
             text-align: center;
             margin: 2rem 0 0.5rem 0;
             color: #555;
             font-size: 1.1em;
-            opacity: 0; /* Hidden by default */
-            transform: translateY(20px); /* Slide up effect */
-            animation: fadeInSlideUp 1s ease-out forwards; /* Apply animation */
-            animation-delay: 0.5s; /* Delay for effect */
         }
-
         .contact-social {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             justify-content: center;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
+            margin-top: 0.5rem;
         }
-
         .contact-social a {
-            font-size: 2.2rem; /* Larger icons */
+            font-size: 1.3rem;
             color: var(--primary);
-            transition: color 0.2s, transform 0.2s;
+            transition: color 0.2s;
         }
-
         .contact-social a:hover {
             color: var(--accent);
-            transform: scale(1.1); /* Pop effect */
         }
-
-        .contact-form-container {
-            max-width: 700px; /* Wider form container */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: 400px;
             margin: 0 auto;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden; /* For rounded corners on iframe */
-            box-shadow: 0 4px 15px var(--shadow-light);
         }
-
-        /* Footer */
+        .contact-form input, .contact-form textarea {
+            padding: 0.8em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            resize: vertical;
+        }
+        .contact-form button {
+            background: var(--accent);
+            color: #fff;
+            padding: 0.8em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: var(--primary);
+        }
         footer {
             background: var(--secondary);
             color: #fff;
             text-align: center;
-            padding: 1.5rem 0;
-            font-size: 0.9rem;
+            padding: 1rem 0;
         }
-
-        /* Animations */
-        @keyframes slideInFromLeft {
-            0% { transform: translateX(-100%); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes slideInFromRight {
-            0% { transform: translateX(100%); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes fadeInSlideUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
         /* Responsive styles */
         @media (max-width: 900px) {
-            main, .nav-container {
-                padding: 0 1rem;
-            }
-            .grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
+            main, .nav-container { max-width: 100%; }
         }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            header h2 { font-size: 1.2rem; }
+        @media (max-width: 700px) {
+            header h1 { font-size: 1.4rem; }
             .nav-links { gap: 1rem; }
-            section { padding: 1.5rem; }
-            .contact-info { flex-direction: column; gap: 0.5rem; }
+            section { padding: 1.1rem; }
         }
-
         @media (max-width: 600px) {
-            .nav-container {
-                flex-direction: row;
-                height: auto; /* Allow height to adjust for menu */
-                padding: 10px 1rem;
-            }
+            .nav-container { flex-direction: row; }
             .nav-links {
                 display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 60px; /* Adjust based on new nav-container height */
+                top: 62px;
                 left: 0;
-                width: 100%;
+                width: 100vw;
                 background: var(--secondary);
-                padding: 1em 0;
+                padding: 0.9em 0;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.09);
             }
-            .nav-links.show {
-                display: flex;
-            }
-            .nav-links li {
-                text-align: center;
-                padding: 0.5rem 0;
-            }
-            .hamburger {
-                display: block;
-            }
-            section { padding: 1rem; }
-            .grid {
-                grid-template-columns: 1fr; /* Single column on small screens */
-            }
+            .nav-links.show { display: flex; }
+            .hamburger { display: block; }
+            section { padding: 0.8rem; }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Nagaraju Nampally</h1>
-        <h2>Sr Database Administrator/Reliability Engineer</h2>
+        <h2>Lead Database / Site Reliability Engineer</h2>
         <div class="contact-info">
-            <span><i class="fas fa-phone"></i> 909-353-3280</span>  |
-            <a href="mailto:nampraj13@gmail.com"><i class="fas fa-envelope"></i> nampraj13@gmail.com</a>  |
-            <a href="https://www.linkedin.com/in/nnampally/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>  |
-            <a href="https://github.com/nagaraju11" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> 
+            <span><i class="fas fa-phone"></i> 909-353-3280</span>|
+            <a href="mailto:nampraj13@gmail.com"><i class="fas fa-envelope"></i> nampraj13@gmail.com</a>|
+            <a href="https://linkedin.com/in/nnampally" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>|
+            <a href="https://github.com/nnampally" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
         </div>
     </header>
     <nav>
@@ -496,227 +253,96 @@
         <section id="about">
             <h2>About Me</h2>
             <p>
-                Results-driven Database Engineer/Reliability Engineer, with an emphasis on PostgreSQL.  I possess over 8 years of experience in cloud and on-prem database administration, performance tuning, and high availability solutions.  I am skilled in automating database systems and improving operational efficiency with AWS, Azure, and GCP.  My expertise spans Site Reliability Engineering, system reliability, disaster recovery, and cloud database migrations.  I have 3+ years of experience focused on improving system reliability, uptime, and operational efficiency through DevOps principles, automation, CI/CD, and cloud technologies.  I thrive in dynamic environments, constantly seeking to innovate and improve database operations, with a strong passion for database automation, performance tuning, and cloud technologies. 
+                Results-driven Database Engineer and Site Reliability Engineer with 8+ years of experience specializing in PostgreSQL, cloud and on-premises database administration, performance tuning, automation, and multi-cloud architectures. Passionate about reliability, observability, and building scalable, efficient systems.
             </p>
         </section>
         <section id="experience">
             <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Sr Database Administrator/Reliability Engineer</h3>
-                <p><strong>Workday Inc.</strong> – Pleasanton, CA | July 2021 – Present </p>
+            <div>
+                <h3>Lead Database Consultant</h3>
+                <p>ADP Inc. – Pasadena, CA | May 2025 – Present</p>
                 <ul>
-                    <li>As a Senior Database Administrator/SRE, I am responsible for the design, installation, configuration, maintenance, and performance management to ensure performance optimization and high availability of database clusters. </li>
-                    <li>I have performed upgrades, backups, disaster recovery, and schema refreshes.  I also worked on database tuning, indexing strategies, and automation using shell scripts. </li>
-                    <li>Designed and managed highly available, fault-tolerant PostgreSQL clusters across AWS, GCP, and Azure. </li>
-                    <li>Automated database health checks, scaling, and backup processes using Terraform, Chef, and Python, reducing manual effort by 40%. </li>
-                    <li>Led cloud database migrations to AWS Aurora RDS (PostgreSQL/MySQL), optimizing for performance, cost, and resilience, and reduced operational costs by 20% through strategic migration planning. </li>
-                    <li>Implemented multi-region disaster recovery solutions with automated failover mechanisms. </li>
-                    <li>Championed CI/CD and DevOps practices using open-source tools, providing technical leadership and integrating processes with unified pipelines in the development of automation using Containers and Kubernetes orchestration, reducing internal software releases (go-live) from 3 months to 7 days. </li>
-                    <li>Developed custom Lambda functions for RDS lifecycle management and security automation. </li>
-                    <li>Developed automation scripts for password rotation, schema changes, and monitoring, with secure password rotation scripts integrated with Jenkins. </li>
-                    <li>Improved observability by integrating Grafana, Prometheus, and CloudWatch for proactive monitoring. </li>
-                    <li>Built APIs and custom dashboards (Flask) for real-time database monitoring and metadata access. </li>
-                    <li>Designed and maintained Dockerfiles with multi-stage builds for optimized container images. </li>
-                    <li>Deployed, managed, and scaled production applications using Kubernetes (K8s) while troubleshooting pod, networking, and storage issues using kubectl, logs, and monitoring tools. </li>
-                    <li>Provided 24/7 on-call support, resolving incidents and addressing user concerns proactively. </li>
+                    <li>Lead initiatives to improve database performance, streamline operations, and drive automation across the database lifecycle.</li>
+                    <li>Monitor database health and performance using CloudWatch, Dynatrace, and Grafana.</li>
+                    <li>Optimize PostgreSQL queries, parameter tuning, and index management.</li>
                 </ul>
             </div>
-            <div class="experience-item">
-                <h3>Sr PostgreSQL DBA/AWS Solution Architect (Lead)</h3>
-                <p><strong>Synapsis Inc. (T-Mobile, Deloitte)</strong> – Aug 2018 – July 2021 </p>
+            <hr>
+            <div>
+                <h3>Sr Database Administrator / Reliability Engineer</h3>
+                <p>Workday Inc. – Pleasanton, CA | July 2021 – April 2025</p>
                 <ul>
-                    <li>Responsible for designing, installing, configuring, and managing highly available database clusters while ensuring performance optimization and disaster recovery solutions. </li>
-                    <li>Developed and optimized PostgreSQL queries, stored procedures, and schema designs to improve performance. </li>
-                    <li>Built high-scale data pipelines for migrating SQL Server and Oracle DB to PostgreSQL on AWS RDS. </li>
-                    <li>Resolved database performance and scalability issues using query tuning and indexing strategies. </li>
-                    <li>Designed and implemented PostgreSQL HA & DR solutions using multi-AZ failover and cross-region replication. </li>
-                    <li>Created automated DevOps pipelines for database deployments and schema management using Terraform. </li>
-                    <li>Optimized AWS costs by selecting cost-effective services and architectures, implementing cost monitoring, and offering recommendations for cost reduction, saving $200k/Month. </li>
-                    <li>Implemented PostgreSQL partitioning and streaming replication for scalability. </li>
-                    <li>Developed monitoring dashboards with ELK Stack & Prometheus to track query performance/system health. </li>
-                    <li>Migrated databases from on-prem server to AWS RDS Services (Oracle/SQL Server/MySQL) and provided support for Oracle/SQL Server/MySQL server administration and performance tuning. </li>
-                    <li>Performed point-in-time restores as per user request to recover data loss. </li>
-                    <li>Configured alerts for DB instances by subscribing to Amazon DB events. </li>
-                    <li>Used Amazon RDS Multi-AZ for automatic failover and high availability at the database tier for PostgreSQL workloads. </li>
-                    <li>Designed and implemented cross-region disaster recovery architecture for all mission-critical RDS instances. </li>
-                    <li>Assisted engineering team in the design of appropriate DB Schemas and indexing strategy for performance and scalability. </li>
-                    <li>Identified and resolved incidents and addressed user problems/concerns, troubleshooting database issues. </li>
-                    <li>Performed AWS EC2 AMI and EBS backups and restores. </li>
-                    <li>Monitored system logs, OS logs, database logs, trace files, and database alert files to detect and troubleshoot runtime problems. </li>
-                    <li>Created custom monitoring key metrics of the database and various AWS services like AWS EC2, AWS RDS, Elastic Load Balancer, Elastic Block Store (EBS), and many others by using Amazon CloudWatch. </li>
-                    <li>Planned and deployed RDBMS upgrades/patches and performed other weekend maintenance activities as part of on-call support. </li>
-                    <li>Optimized PostgreSQL parameters for performance improvement. </li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>PostgreSQL DBA</h3>
-                <p><strong>PVR America</strong> – Oct 2017 – Aug 2018 </p>
-                <ul>
-                    <li>Responsible for managing all aspects of the PostgreSQL databases (cloud and on-premises). </li>
-                    <li>Installed and configured new servers as per customer's request. </li>
-                    <li>Cloned Development, Test, and UAT environments with production data as per customer's request. </li>
-                    <li>Designed and implemented disaster recovery for the PostgreSQL Database. </li>
-                    <li>Extensively worked on ELT performance tuning using multiple Gpfdist instances, and suggested configuration parameters based on customers' environment for smooth functioning of Greenplum databases. </li>
-                    <li>Tuned Greenplum Databases using vacuum, vacuum analyze utility, gpcheckperf, explain plan query, and Data Command Center to load balance the database segments. </li>
-                    <li>Installed, Configured, and Administered Greenplum/PostgreSQL Databases in the Dev, Staging, and Prod environment. </li>
-                    <li>Monitored Greenplum Systems and Enabled System Alerts Notifications, Checking System State, Checking Disk Space Usage, and Checking of Data Distribution skew. </li>
-                    <li>Successfully upgraded Greenplum Dev, Test, and Prod Databases from version 4.3.8.1 to 4.3.11.3. </li>
-                    <li>Patched, upgraded, and kept the PostgreSQL DBs current.  Developed and enhanced scripts to automate and execute various DBA tasks. </li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>PostgreSQL DBA</h3>
-                <p><strong>Global Data Mart</strong> – May 2016 – Oct 2017 </p>
-                <ul>
-                    <li>Experienced in administering and maintaining enterprise/open-source database servers on Linux/Windows servers. </li>
-                    <li>Evaluated customer deployments of EDB Postgres and PostgreSQL and made recommendations on how to improve them. </li>
-                    <li>Performed database migrations from Oracle, SQL Server, MySQL to EDB Postgres. </li>
-                    <li>Tuned performance and made performance tuning recommendations for existing database deployments. </li>
-                    <li>Set up High Availability configurations using Postgres. </li>
-                    <li>Developed architectures to migrate data and entire databases; implemented and delivered on the architecture migrating databases. </li>
-                    <li>Installed and configured MySQL server. </li>
-                    <li>Troubleshot problems regarding the databases, applications, and development tools. </li>
+                    <li>Designed and managed highly available PostgreSQL clusters across AWS, GCP, Azure.</li>
+                    <li>Automated health checks, scaling, and backups with Terraform, Chef, and Python.</li>
+                    <li>Led cloud DB migrations, optimizing performance, cost, and resilience.</li>
                 </ul>
             </div>
         </section>
         <section id="skills">
             <h2>Skills</h2>
             <ul class="skills-list">
-                <li><i class="fas fa-database"></i> PostgreSQL </li>
-                <li><i class="fas fa-cogs"></i> Database Administration </li>
-                <li><i class="fas fa-chart-line"></i> Performance Tuning & Optimization </li>
-                <li><i class="fab fa-aws"></i> AWS </li>
-                <li><i class="fab fa-google"></i> GCP </li>
-                <li><i class="fab fa-microsoft"></i> Azure </li>
-                <li><i class="fas fa-server"></i> Kubernetes </li>
-                <li><i class="fas fa-docker"></i> Docker & Containerization </li>
-                <li><i class="fas fa-code"></i> Infrastructure as Code (IaC) </li>
-                <li><i class="fab fa-terraform"></i> Terraform </li>
-                <li><i class="fab fa-python"></i> Python Scripting </li>
-                <li><i class="fas fa-robot"></i> Automation </li>
-                <li><i class="fas fa-eye"></i> Observability (Grafana, Prometheus, CloudWatch, Dynatrace) </li>
-                <li><i class="fas fa-exclamation-triangle"></i> Reliability Engineering </li>
-                <li><i class="fas fa-shield-alt"></i> Database Security </li>
-                <li><i class="fas fa-cloud-upload-alt"></i> Cloud Migrations </li>
-                <li><i class="fas fa-clipboard-list"></i> Disaster Recovery </li>
-                <li><i class="fas fa-project-diagram"></i> Multi-Cloud Architecture </li>
-                <li><i class="fas fa-cubes"></i> Microservices </li>
-                <li><i class="fab fa-github"></i> Git/GitHub </li>
-                <li><i class="fas fa-terminal"></i> Shell Scripting </li>
-                <li><i class="fas fa-database"></i> MySQL </li>
-                <li><i class="fas fa-database"></i> Oracle </li>
+                <li><i class="fas fa-database"></i> PostgreSQL</li>
+                <li><i class="fas fa-chart-line"></i> Performance Tuning</li>
+                <li><i class="fab fa-aws"></i> Cloud Migrations (AWS, GCP, Azure)</li>
+                <li><i class="fas fa-server"></i> Kubernetes & Containerization</li>
+                <li><i class="fas fa-code"></i> Infrastructure as Code (Terraform, Chef)</li>
+                <li><i class="fas fa-eye"></i> Observability & Monitoring</li>
+                <li><i class="fas fa-user-shield"></i> Security & Compliance</li>
             </ul>
         </section>
         <section id="projects">
-            <h2>Featured Projects</h2>
+            <h2>Projects</h2>
             <div class="grid">
                 <div class="card">
-                    <img src="https://dummyimage.com/600x180/1976d2/fff&text=Cloud+Migration" alt="Enterprise Cloud Database Migration Project">
-                    <h3>Enterprise Cloud Database Migration</h3>
-                    <p>Successfully led the migration of a large-scale on-premises PostgreSQL database infrastructure to AWS RDS and Azure SQL, reducing operational overhead and improving scalability by 30%.  Implemented a zero-downtime migration strategy using logical replication and custom tooling. </p>
-                    <a href="https://github.com/nnampally/cloud-db-migration-project" target="_blank" rel="noopener noreferrer">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                    <img src="https://dummyimage.com/600x140/1976d2/fff&text=Cloud+Migration" alt="Cloud Migration Project">
+                    <h3>Cloud Migration</h3>
+                    <p>Migrated databases to AWS RDS and Azure SQL, improving performance and cost efficiency.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
                 </div>
                 <div class="card">
-                    <img src="https://dummyimage.com/600x180/283593/fff&text=Automation" alt="Automated Database Lifecycle Management Project">
-                    <h3>Automated Database Lifecycle Management</h3>
-                    <p>Developed a comprehensive automation suite using Python, Terraform, and Chef to streamline database provisioning, patching, backup/restore, and health checks across hybrid cloud environments. This reduced deployment times by 70% and improved consistency, and automated database operations, reducing downtime by 30%. </p>
-                    <a href="https://github.com/nnampally/db-automation-suite" target="_blank" rel="noopener noreferrer">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                    <img src="https://dummyimage.com/600x140/283593/fff&text=Automation" alt="Database Automation Project">
+                    <h3>Database Automation</h3>
+                    <p>Automated maintenance workflows using Python, Terraform, and Chef.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
                 </div>
                 <div class="card">
-                    <img src="https://dummyimage.com/600x180/1a237e/fff&text=Observability" alt="Advanced Observability Dashboards Project">
-                    <h3>Advanced Observability Dashboards & Alerts</h3>
-                    <p>Designed and implemented real-time monitoring and alerting dashboards in Grafana, integrating data from Prometheus, CloudWatch, and custom exporters.  This significantly enhanced visibility into database performance, latency, and resource utilization, enabling proactive issue resolution. I also built APIs and custom dashboards (Flask) for real-time database monitoring and metadata access. </p>
-                    <a href="https://github.com/nnampally/grafana-observability" target="_blank" rel="noopener noreferrer">View on GitHub <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                 <div class="card">
-                    <img src="https://dummyimage.com/600x180/42a5f5/fff&text=Kubernetes+DB" alt="PostgreSQL on Kubernetes Deployment Project">
-                    <h3>PostgreSQL on Kubernetes Deployment</h3>
-                    <p>Architected and deployed highly available PostgreSQL clusters on Kubernetes using the Crunchy Data PostgreSQL Operator. Implemented automated failover, scaling, and persistent storage solutions, demonstrating robust database management in containerized environments. </p>
-                    <a href="https://github.com/nnampally/k8s-postgres-operator" target="_blank" rel="noopener noreferrer">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                    <img src="https://dummyimage.com/600x140/1a237e/fff&text=Monitoring" alt="Dashboard Project">
+                    <h3>Monitoring Dashboards</h3>
+                    <p>Developed Grafana dashboards for real-time database monitoring.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
                 </div>
             </div>
         </section>
+        <!-- Google Form Contact Section -->
         <section id="contact">
-            <h2>Get in Touch</h2>
-            <p class="quote" id="dynamic-quote"></p>
-            <div class="contact-social">
-                <a href="https://www.linkedin.com/in/nnampally/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a> 
-                <a href="https://github.com/nagaraju11" target="_blank" rel="noopener noreferrer" title="GitHub Profile"><i class="fab fa-github"></i></a> 
-                <a href="mailto:nampraj13@gmail.com" title="Send an Email"><i class="fas fa-envelope"></i></a> 
-                <a href="tel:+19093533280" title="Call Me"><i class="fas fa-phone"></i></a> 
-            </div>
-            <div class="contact-form-container">
+            <h2>Contact</h2>
+            <div style="width:100%;max-width:640px;margin:0 auto;">
+                <!-- Replace the src URL below with your Google Form's embed link -->
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScSFqWv00VkHo-hz8VTmmsq3h13Bjg63ASUKU-Aw5uSSjqjqQ/viewform?embedded=true"
-                        width="100%" height="750" frameborder="0" marginheight="0" marginwidth="0">
+                        width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">
                     Loading…
                 </iframe>
             </div>
         </section>
+        <div class="quote" id="dynamic-quote"></div>
     </main>
     <footer>
-        <p>&copy; <span id="current-year"></span> Nagaraju Nampally. All rights reserved.</p>
+        &copy; 2025 Nagaraju Nampally. All rights reserved.
     </footer>
     <script>
-        // Hamburger menu toggle
+        // Hamburger menu
         document.getElementById('hamburger').onclick = function() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('show');
-            this.classList.toggle('open'); // Add class to rotate hamburger icon
+            document.getElementById('nav-links').classList.toggle('show');
         };
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-links a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.getElementById('nav-links').classList.remove('show'); // Hide menu on click
-                document.getElementById('hamburger').classList.remove('open'); // Reset hamburger icon
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
         // Dynamic Quotes
         const quotes = [
             "Strive for reliability, automate for efficiency.",
             "Database performance is the backbone of scalability.",
             "Cloud migrations are the future of resilient systems.",
-            "Observability is key to proactive problem-solving.",
-            "Data is the new oil, and databases are its refinery.",
-            "In the world of SRE, stability is paramount.",
-            "Building robust systems, one database at a time."
+            "Observability is key to proactive problem-solving."
         ];
         document.getElementById('dynamic-quote').textContent =
             quotes[Math.floor(Math.random() * quotes.length)];
-
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Optional: Intersection Observer for fade-in sections
-        const sections = document.querySelectorAll('section');
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    entry.target.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        sections.forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            observer.observe(section);
-        });
     </script>
 </body>
 </html>
