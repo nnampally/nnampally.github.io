@@ -1,12 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    if (hamburger && navLinks) {
-        hamburger.onclick = function () {
-            navLinks.classList.toggle('show');
-        };
-    }
+    // Hamburger menu toggle with close on outside click or link click
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        
+        if (hamburger && navLinks) {
+            hamburger.onclick = function (e) {
+                navLinks.classList.toggle('show');
+                e.stopPropagation(); // Prevent the click from bubbling up
+            };
+        
+            // Close menu when clicking outside
+            document.addEventListener('click', function (e) {
+                if (
+                    navLinks.classList.contains('show') &&
+                    !navLinks.contains(e.target) &&
+                    e.target !== hamburger
+                ) {
+                    navLinks.classList.remove('show');
+                }
+            });
+        
+            // Close menu when a nav link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.classList.remove('show');
+                });
+            });
+        }
 
     // Dynamic Quotes
     const dynamicQuote = document.getElementById('dynamic-quote');
