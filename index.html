@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Nagaraju Nampally | Lead Database/Site Reliability Engineer</title>
     <meta name="description" content="Portfolio of Nagaraju Nampally, Lead Database and Site Reliability Engineer specializing in PostgreSQL, cloud migrations, and database optimization.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -11,130 +10,286 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Nagaraju Nampally</h1>
-        <h2>Lead Database / Site Reliability Engineer</h2>
-        <div class="contact-info">
-            <span><i class="fas fa-phone"></i> 909-353-3280</span>|
-            <a href="mailto:nampraj13@gmail.com"><i class="fas fa-envelope"></i> nampraj13@gmail.com</a>|
-            <a href="https://linkedin.com/in/nnampally" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>|
-            <a href="https://github.com/nnampally" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <h1>Nagaraju Nampally</h1>
+            <h2>Lead Database / Site Reliability Engineer</h2>
+            <p class="hero-subtitle">9+ years specializing in PostgreSQL, cloud migrations, and database optimization</p>
+            <div class="contact-info">
+                <a href="tel:909-353-3280" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span class="contact-text">909-353-3280</span>
+                </a>
+                <a href="mailto:nampraj13@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span class="contact-text">nampraj13@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/nnampally" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="contact-text">LinkedIn</span>
+                </a>
+                <a href="https://github.com/nnampally" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span class="contact-text">GitHub</span>
+                </a>
+            </div>
         </div>
-    </header>
-    <nav>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">NN</div>
-            <div class="hamburger" id="hamburger">&#9776;</div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="nav-brand">
+                <a href="#hero">NN</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
+
     <main>
+        <!-- About Section -->
         <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>
-                Results-driven Database Engineer and Site Reliability Engineer with 8+ years of experience specializing in PostgreSQL, cloud and on-premises database administration, performance tuning, automation, and multi-cloud architectures. Passionate about reliability, observability, and building scalable, efficient systems.
-            </p>
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">
+                            Results-driven Database Engineer and Site Reliability Engineer with 8+ years of experience specializing in PostgreSQL, cloud and on-premises database administration, performance tuning, automation, and multi-cloud architectures.
+                        </p>
+                        <p>
+                            Passionate about reliability, observability, and building scalable, efficient systems that drive business success. I bring expertise in cloud migrations, database optimization, and infrastructure automation.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">9+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <!-- <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Cloud Platforms</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
         </section>
+
         <!-- Experience Section -->
-        <section id="experience" class="section">
-            <h2>Professional Experience</h2>
-            <div class="timeline">
-                <!-- ADP -->
-                <div class="timeline-item timeline-item-left">
-                    <div class="timeline-content">
-                        <h3>Lead Database Consultant</h3>
-                        <p>ADP Inc. – Pasadena, CA | May 2025 – Present</p>
-                        <ul>
-                            <li>Monitoring database health and performance using tools like CloudWatch, Dynatrace, and Grafana.</li>
-                            <li>Performing query optimization, parameter tuning, and index management for PostgreSQL databases.</li>
-                            <li>Automating maintenance workflows such as vacuuming, reindexing, backups, and alerting using Python, Bash, and Terraform.</li>
-                        </ul>
+        <section id="experience" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline">
+                    <!-- ADP -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Lead Database Consultant</h3>
+                                <span class="timeline-date">May 2025 – Present</span>
+                            </div>
+                            <p class="company">ADP Inc. – Pasadena, CA</p>
+                            <ul class="achievement-list">
+                                <li>Monitoring database health and performance using tools like CloudWatch, Dynatrace, and Grafana</li>
+                                <li>Performing query optimization, parameter tuning, and index management for PostgreSQL databases</li>
+                                <li>Automating maintenance workflows such as vacuuming, reindexing, backups, and alerting using Python, Bash, and Terraform</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <!-- Workday -->
-                <div class="timeline-item timeline-item-right">
-                    <div class="timeline-content">
-                        <h3>Sr Database Administrator / Reliability Engineer</h3>
-                        <p>Workday Inc. – Pleasanton, CA | July 2021 – April 2025</p>
-                        <ul>
-                            <li>Designed and managed highly available PostgreSQL clusters across AWS, GCP, Azure.</li>
-                            <li>Automated database health checks, scaling, and backup processes using Terraform, Chef, and Python.</li>
-                            <li>Led cloud database migrations, optimizing performance, cost, and resilience.</li>
-                        </ul>
+
+                    <!-- Workday -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Sr Database Administrator / Reliability Engineer</h3>
+                                <span class="timeline-date">July 2021 – April 2025</span>
+                            </div>
+                            <p class="company">Workday Inc. – Pleasanton, CA</p>
+                            <ul class="achievement-list">
+                                <li>Designed and managed highly available PostgreSQL clusters across AWS, GCP, Azure</li>
+                                <li>Automated database health checks, scaling, and backup processes using Terraform, Chef, and Python</li>
+                                <li>Led cloud database migrations, optimizing performance, cost, and resilience</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <!-- T-Mobile -->
-                <div class="timeline-item timeline-item-left">
-                    <div class="timeline-content">
-                        <h3>Sr PostgreSQL DBA / AWS Solution Architect</h3>
-                        <p>Synapsis Inc. (T-Mobile, Deloitte) | Aug 2018 – July 2021</p>
-                        <ul>
-                            <li>Developed and optimized PostgreSQL queries, stored procedures, and schema designs to improve performance.</li>
-                            <li>Built high-scale data pipelines for migrating SQL Server and Oracle DB to PostgreSQL on AWS RDS.</li>
-                            <li>Resolved database performance and scalability issues using query tuning and indexing strategies.</li>
-                        </ul>
+
+                    <!-- T-Mobile -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Sr PostgreSQL DBA / AWS Solution Architect</h3>
+                                <span class="timeline-date">Aug 2018 – July 2021</span>
+                            </div>
+                            <p class="company">Synapsis Inc. (T-Mobile, Deloitte)</p>
+                            <ul class="achievement-list">
+                                <li>Developed and optimized PostgreSQL queries, stored procedures, and schema designs to improve performance</li>
+                                <li>Built high-scale data pipelines for migrating SQL Server and Oracle DB to PostgreSQL on AWS RDS</li>
+                                <li>Resolved database performance and scalability issues using query tuning and indexing strategies</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li><i class="fas fa-database"></i> PostgreSQL</li>
-                <li><i class="fas fa-chart-line"></i> Performance Tuning</li>
-                <li><i class="fab fa-aws"></i> Cloud Migrations (AWS, GCP, Azure)</li>
-                <li><i class="fas fa-server"></i> Kubernetes & Containerization</li>
-                <li><i class="fas fa-code"></i> Infrastructure as Code (Terraform, Chef)</li>
-                <li><i class="fas fa-eye"></i> Observability & Monitoring</li>
-                <li><i class="fas fa-user-shield"></i> Security & Compliance</li>
-                <li><<i class="fa-light fa-gears"></i>Database Reliability Engineer</li>
-            </ul>
-        </section>
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="grid">
-                <div class="card">
-                    <img src="https://dummyimage.com/600x140/1976d2/fff&text=Cloud+Migration" alt="Cloud Migration Project">
-                    <h3>Cloud Migration</h3>
-                    <p>Migrated databases to AWS RDS and Azure SQL, improving performance and cost efficiency.</p>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
-                </div>
-                <div class="card">
-                    <img src="https://dummyimage.com/600x140/283593/fff&text=Automation" alt="Database Automation Project">
-                    <h3>Database Automation</h3>
-                    <p>Automated maintenance workflows using Python, Terraform, and Chef.</p>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
-                </div>
-                <div class="card">
-                    <img src="https://dummyimage.com/600x140/1a237e/fff&text=Monitoring" alt="Dashboard Project">
-                    <h3>Monitoring Dashboards</h3>
-                    <p>Developed Grafana dashboards for real-time database monitoring.</p>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Database Technologies</h3>
+                        <div class="skill-items">
+                            <span class="skill-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span class="skill-tag"><i class="fas fa-chart-line"></i> Performance Tuning</span>
+                            <span class="skill-tag"><i class="fas fa-server"></i> Database Design</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud Platforms</h3>
+                        <div class="skill-items">
+                            <span class="skill-tag"><i class="fab fa-aws"></i> AWS</span>
+                            <span class="skill-tag"><i class="fab fa-google"></i> GCP</span>
+                            <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>DevOps & Automation</h3>
+                        <div class="skill-items">
+                            <span class="skill-tag"><i class="fas fa-code"></i> Terraform</span>
+                            <span class="skill-tag"><i class="fab fa-docker"></i> Kubernetes</span>
+                            <span class="skill-tag"><i class="fas fa-robot"></i> Chef</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Monitoring & Reliability</h3>
+                        <div class="skill-items">
+                            <span class="skill-tag"><i class="fas fa-eye"></i> Grafana</span>
+                            <span class="skill-tag"><i class="fas fa-chart-area"></i> CloudWatch</span>
+                            <span class="skill-tag"><i class="fas fa-shield-alt"></i> SRE Practices</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Google Form Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <div style="width:100%;max-width:640px;margin:0 auto;">
-                <!-- Replace the src URL below with your Google Form's embed link -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScSFqWv00VkHo-hz8VTmmsq3h13Bjg63ASUKU-Aw5uSSjqjqQ/viewform?embedded=true"
-                        width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">
-                    Loading…
-                </iframe>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3>Multi-Cloud Database Migration</h3>
+                        <p>Led migration of legacy databases to AWS RDS and Azure SQL, achieving 40% cost reduction and 60% performance improvement.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">AWS RDS</span>
+                            <span class="tech-tag">Azure SQL</span>
+                        </div>
+                        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Database Automation Suite</h3>
+                        <p>Developed comprehensive automation workflows using Python, Terraform, and Chef, reducing manual maintenance by 85%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Chef</span>
+                        </div>
+                        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Real-time Monitoring Platform</h3>
+                        <p>Built comprehensive Grafana dashboards with custom metrics, reducing incident response time by 70%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">AlertManager</span>
+                        </div>
+                        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="quote" id="dynamic-quote"></div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-intro">
+                        <p>Ready to discuss your database challenges or explore new opportunities? I'd love to hear from you.</p>
+                    </div>
+                    <div class="contact-form-container">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScSFqWv00VkHo-hz8VTmmsq3h13Bjg63ASUKU-Aw5uSSjqjqQ/viewform?embedded=true"
+                                width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
+                            Loading…
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="quote-section">
+            <div class="container">
+                <div class="quote" id="dynamic-quote"></div>
+            </div>
+        </div>
     </main>
-    <footer>
-        2025 Nagaraju Nampally.
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nagaraju Nampally.</p>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/nnampally" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/nnampally" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
     <!-- JavaScript -->
     <script src="js/scripts.js"></script>
 </body>
