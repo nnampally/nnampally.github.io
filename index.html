@@ -14,11 +14,22 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-avatar">
-                <i class="fas fa-user-circle"></i>
+                <img src="images/profile.jpg" alt="Nagaraju Nampally" class="profile-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <i class="fas fa-user-circle profile-fallback"></i>
             </div>
             <h1>Nagaraju Nampally</h1>
             <h2>Lead Database / Site Reliability Engineer</h2>
             <p class="hero-subtitle">9+ years specializing in PostgreSQL, cloud migrations, and database optimization</p>
+            <div class="hero-details">
+                <p class="hero-description">
+                    Passionate about building reliable, scalable database systems and automating infrastructure workflows. 
+                    Expert in multi-cloud environments with a proven track record of optimizing performance and reducing costs.
+                </p>
+                <!-- <a href="docs/resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">
+                    <i class="fas fa-download"></i>
+                    <span>Download Resume</span>
+                </a> -->
+            </div>
             <div class="contact-info">
                 <a href="tel:909-353-3280" class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -69,11 +80,79 @@
                 <div class="about-content">
                     <div class="about-text">
                         <p class="lead">
-                            Results-driven Database Engineer and Site Reliability Engineer with 8+ years of experience specializing in PostgreSQL, cloud and on-premises database administration, performance tuning, automation, and multi-cloud architectures.
+                            Results-driven Database Engineer and Site Reliability Engineer with 9+ years of experience specializing in PostgreSQL, cloud and on-premises database administration, performance tuning, automation, and multi-cloud architectures.
                         </p>
-                        <p>
-                            Passionate about reliability, observability, and building scalable, efficient systems that drive business success. I bring expertise in cloud migrations, database optimization, and infrastructure automation.
+                        <div class="about-details">
+                            <h3>What Sets Me Apart</h3>
+                            <div class="highlight-points">
+                                <div class="highlight-item">
+                                    <i class="fas fa-rocket"></i>
+                                    <div>
+                                        <h4>Performance Optimization Expert</h4>
+                                        <p>Achieved 300% performance improvements through advanced query optimization, indexing strategies, and database tuning across enterprise-scale systems.</p>
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-cloud"></i>
+                                    <div>
+                                        <h4>Multi-Cloud Architecture</h4>
+                                        <p>Led successful migrations to AWS, GCP, and Azure, reducing operational costs by 40% while improving system reliability and scalability.</p>
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-cogs"></i>
+                                    <div>
+                                        <h4>Automation & DevOps</h4>
+                                        <p>Built comprehensive automation frameworks using Terraform, Python, and Chef, reducing manual maintenance tasks by 85% and incident response time by 70%.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="expertise-areas">
+                                <h3>Core Expertise</h3>
+                                <div class="expertise-grid">
+                                    <div class="expertise-item">
+                                        <strong>Database Technologies:</strong>
+                                        <span>PostgreSQL, MySQL, SQL Server, Oracle, Redis</span>
+                                    </div>
+                                    <div class="expertise-item">
+                                        <strong>Cloud Platforms:</strong>
+                                        <span>AWS (RDS, EC2, CloudWatch), GCP (Cloud SQL), Azure (SQL Database)</span>
+                                    </div>
+                                    <div class="expertise-item">
+                                        <strong>DevOps & Tools:</strong>
+                                        <span>Terraform, Kubernetes, Docker, Chef, Ansible, Git</span>
+                                    </div>
+                                    <div class="expertise-item">
+                                        <strong>Monitoring & Observability:</strong>
+                                        <span>Grafana, Prometheus, Dynatrace, DataDog, ELK Stack</span>
+                                    </div>
+                                    <div class="expertise-item">
+                                        <strong>Programming Languages:</strong>
+                                        <span>Python, Bash, SQL, JavaScript, Go</span>
+                                    </div>
+                                    <div class="expertise-item">
+                                        <strong>Methodologies:</strong>
+                                        <span>SRE Practices, Agile, CI/CD, Infrastructure as Code</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="about-passion">
+                            Passionate about reliability, observability, and building scalable, efficient systems that drive business success. I bring expertise in cloud migrations, database optimization, and infrastructure automation with a focus on operational excellence.
                         </p>
+                        
+                        <div class="cta-section">
+                            <!-- <a href="docs/resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn-primary">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Download Full Resume</span>
+                            </a> -->
+                            <a href="#contact" class="contact-btn">
+                                <i class="fas fa-comments"></i>
+                                <span>Let's Discuss Your Project</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="about-stats">
                         <div class="stat-item">
@@ -81,7 +160,7 @@
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <!-- <div class="stat-item">
-                            <div class="stat-number">50+</div>
+                            <div class="stat-number">50+</</div>
                             <div class="stat-label">Projects Completed</div>
                         </div>
                         <div class="stat-item">
@@ -148,7 +227,27 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Earlier Experience & Education</h3>
+                                <!-- <span class="timeline-date">2015 – 2018</span> -->
+                            </div>
+                            <p class="company">Various Organizations & Academic Background</p>
+                            <ul class="achievement-list">
+                                <li>Database administration roles with progressive responsibilities</li>
+                                <li>Computer Science education with focus on database systems</li>
+                                <li>Early career development in PostgreSQL and database optimization</li>
+                            </ul>
+                            <div class="timeline-cta">
+                                <a href="docs/resume.pdf" target="_blank" rel="noopener noreferrer" class="learn-more-btn">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>View Complete Resume for Full Details</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </section>
 
@@ -200,50 +299,104 @@
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>IncognitoJSON</h3>
+                        <p>A privacy-focused JSON formatting and validation tool built with modern web technologies. Features secure client-side processing, syntax highlighting, and data validation without server storage.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JSON Processing</span>
+                        </div>
+                        <a href="https://incognitojson.com/" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Visit Website
+                        </a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>OpsyLux</h3>
+                        <p>A modern event hall booking platform startup that streamlines venue reservations and event management. Features real-time availability, booking management, payment processing, and venue discovery for event organizers.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Booking System</span>
+                            <span class="tech-tag">Event Management</span>
+                            <span class="tech-tag">Payment Integration</span>
+                            <span class="tech-tag">Venue Management</span>
+                        </div>
+                        <a href="https://opsylux.com/" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Visit Website
+                        </a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-icon">
                             <i class="fas fa-cloud-upload-alt"></i>
                         </div>
                         <h3>Multi-Cloud Database Migration</h3>
-                        <p>Led migration of legacy databases to AWS RDS and Azure SQL, achieving 40% cost reduction and 60% performance improvement.</p>
+                        <p>Led migration of legacy databases to AWS RDS and Azure SQL, achieving 40% cost reduction and 60% performance improvement using automated scripts and monitoring.</p>
                         <div class="project-tech">
                             <span class="tech-tag">PostgreSQL</span>
                             <span class="tech-tag">AWS RDS</span>
                             <span class="tech-tag">Azure SQL</span>
+                            <span class="tech-tag">Migration</span>
                         </div>
-                        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-external-link-alt"></i> Learn More
+                        <a href="#contact" class="project-link">
+                            <i class="fas fa-envelope"></i> Contact for Details
                         </a>
                     </div>
-                    
-                    <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fas fa-cogs"></i>
+                </div>
+                
+                <!-- Additional Projects Section -->
+                <div class="more-projects">
+                    <h3 class="more-projects-title">Other Notable Projects</h3>
+                    <div class="projects-list">
+                        <div class="project-item">
+                            <div class="project-item-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="project-item-content">
+                                <h4>Database Automation Suite</h4>
+                                <p>Comprehensive automation workflows using Python, Terraform, and Chef, reducing manual maintenance by 85%</p>
+                                <div class="project-item-tech">
+                                    <span class="mini-tech-tag">Python</span>
+                                    <span class="mini-tech-tag">Terraform</span>
+                                    <span class="mini-tech-tag">Chef</span>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Database Automation Suite</h3>
-                        <p>Developed comprehensive automation workflows using Python, Terraform, and Chef, reducing manual maintenance by 85%.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">Chef</span>
+                        
+                        <div class="project-item">
+                            <div class="project-item-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="project-item-content">
+                                <h4>Real-time Monitoring Platform</h4>
+                                <p>Built comprehensive Grafana dashboards with custom metrics, reducing incident response time by 70%</p>
+                                <div class="project-item-tech">
+                                    <span class="mini-tech-tag">Grafana</span>
+                                    <span class="mini-tech-tag">Prometheus</span>
+                                    <span class="mini-tech-tag">AlertManager</span>
+                                </div>
+                            </div>
                         </div>
-                        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-external-link-alt"></i> Learn More
-                        </a>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fas fa-chart-line"></i>
+                        
+                        <div class="project-item">
+                            <div class="project-item-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="project-item-content">
+                                <h4>High-Performance Query Optimizer</h4>
+                                <p>Developed PostgreSQL query optimization tools that improved database performance by 300% for high-traffic applications</p>
+                                <div class="project-item-tech">
+                                    <span class="mini-tech-tag">PostgreSQL</span>
+                                    <span class="mini-tech-tag">Query Optimization</span>
+                                    <span class="mini-tech-tag">Performance</span>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Real-time Monitoring Platform</h3>
-                        <p>Built comprehensive Grafana dashboards with custom metrics, reducing incident response time by 70%.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Grafana</span>
-                            <span class="tech-tag">Prometheus</span>
-                            <span class="tech-tag">AlertManager</span>
-                        </div>
-                        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-external-link-alt"></i> Learn More
-                        </a>
                     </div>
                 </div>
             </div>
