@@ -1176,3 +1176,17 @@ button:focus {
     transform: translateY(-2px);
     box-shadow: var(--shadow-light);
 }
+
+
+.nav-brand a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.nav-brand a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
